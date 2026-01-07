@@ -13,7 +13,7 @@
         padding: 0;
       }
       body {
-        background-color: blueviolet;
+        background-color: black;
         color: aliceblue;
       }
       nav{
@@ -21,16 +21,22 @@
         justify-content: space-around;
         align-items: center;
         height: 80px;
-        background-color: chocolate;
+        background-color: palevioletred;
       }
       nav ul{
         display: flex;
         justify-content: space-around;
         align-items: center;
       }
-      nav ul li{
+      nav ul li a{
        list-style: none;
        margin:0 23px ; 
+       text-decoration: none;
+       color: white;
+      }
+      nav ul li a:hover{
+        color: cadetblue;
+        font-size: 1.02rem;
       }
       .left{
         font-size: larger;
@@ -42,9 +48,19 @@
 
       }
       .leftsection{
-        background-color: brown;
+        background-color: darkblue;
         color: blueviolet;
-    
+        font-size: xx-large;
+      }
+      .rightsection{
+         width:"100px" margin="80px";
+      }
+      .pinky{
+        color: blue;
+      }
+      .element{
+        color: brown;
+        background-color: black;
       }
       
       
@@ -56,24 +72,38 @@
         <div class="left">umars portfolio it is heehaw</div>
         <div class="right">
             <ul>
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>SERVICES</li>
-                <li>PROJECTS</li>
-                <li>CONTACT ME</li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/">ABOUT</a></li>
+                <li><a href="/">SERVICES</a></li>
+                <li><a href="/">PROJECTS</a></li>
+                <li><a href="/">CONTACT ME</a></li>
             </ul>
         </div>
       </nav>
     </header>
  <main>
     <section class="first">
-        <div class="leftsection"> Hi, my name is UMAR.
+        <div class="leftsection"> Hi, my name is  <span class="pinky">UMAR.</span>
             <div>I am a web developer</div>
+            <span id="element"></span>
         </div>
-        <div class="rightsection">
-            <img src="pg.jpg" alt="" width="100px">
+        <div class="rightsection" >
+            <img src="pg.jpg" alt="" width="400px" margin="80px" >
         </div>
     </section>
+
+    <section class="secondsection">
+        <h1>past experience</h1>
+    </section>
+
  </main> 
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+ <script>
+    var typed = new Typed('#element', {
+      strings: ['struggle', 'no jobs man','mehnat kr bhai'],
+      typeSpeed: 50,
+    });
+  </script>
   </body>
 </html>
