@@ -1,109 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>umar-developer portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        background-color: black;
-        color: aliceblue;
-      }
-      nav{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 80px;
-        background-color: palevioletred;
-      }
-      nav ul{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-      nav ul li a{
-       list-style: none;
-       margin:0 23px ; 
-       text-decoration: none;
-       color: white;
-      }
-      nav ul li a:hover{
-        color: cadetblue;
-        font-size: 1.02rem;
-      }
-      .left{
-        font-size: larger;
-      }
-      .first{
-        display: flex;
-        justify-content: space-around;
-        margin: 23px 0;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umar | Web Developer</title>
 
-      }
-      .leftsection{
-        background-color: darkblue;
-        color: blueviolet;
-        font-size: xx-large;
-      }
-      .rightsection{
-         width:"100px" margin="80px";
-      }
-      .pinky{
-        color: blue;
-      }
-      .element{
-        color: brown;
-        background-color: black;
-      }
-      
-      
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="left">umars portfolio it is heehaw</div>
-        <div class="right">
-            <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="/">ABOUT</a></li>
-                <li><a href="/">SERVICES</a></li>
-                <li><a href="/">PROJECTS</a></li>
-                <li><a href="/">CONTACT ME</a></li>
-            </ul>
-        </div>
-      </nav>
-    </header>
- <main>
-    <section class="first">
-        <div class="leftsection"> Hi, my name is  <span class="pinky">UMAR.</span>
-            <div>I am a web developer</div>
-            <span id="element"></span>
-        </div>
-        <div class="rightsection" >
-            <img src="pg.jpg" alt="" width="400px" margin="80px" >
-        </div>
-    </section>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <section class="secondsection">
-        <h1>past experience</h1>
-    </section>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
- </main> 
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    body {
+      background-color: #0f0f0f;
+      color: white;
+    }
 
- <script>
-    var typed = new Typed('#element', {
-      strings: ['struggle', 'no jobs man','mehnat kr bhai'],
-      typeSpeed: 50,
-    });
-  </script>
-  </body>
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      height: 80px;
+      background-color: #1a1a1a;
+    }
+
+    nav .left {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ff4c68;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li {
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff4c68;
+    }
+
+    /* HERO SECTION */
+    .first {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 100px 60px;
+    }
+
+    .leftsection {
+      max-width: 50%;
+      font-size: 2.5rem;
+    }
+
+    .leftsection span {
+      color: #ff4c68;
+    }
+
+    #element {
+      color: #00ffd5;
+      font-weight: 600;
+    }
+
+    .rightsection img {
+      width: 400px;
+      border-radius: 10px;
+    }
+
+    hr {
+      height: 2px;
+      background: #ff4c68;
+      border: none;
+      margin: 80px 60px;
+    }
+
+    /* SECOND SECTION */
+    .secondsection {
+      padding: 0 60px;
+    }
+
+    .secondsection h1 {
+      margin-top: 10px;
+      font-size: 2rem;
+    }
+
+    .text-gray {
+      color: gray;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .first {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .leftsection {
+        max-width: 100%;
+      }
+
+      .rightsection img {
+        margin-top: 40px;
+        width: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="left">Umar.dev</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Skills</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="first">
+    <div class="leftsection">
+      Hi, my name is <span>Umar</span><br>
+      I am a <span id="element"></span>
+    </div>
+
+    <div class="rightsection">
+      <img src="pg.jpg" alt="Umar image">
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="secondsection">
+    <span class="text-gray">What I have done so far</span>
+    <h1>Work Experience</h1>
+  </section>
+</main>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed('#element', {
+    strings: ['Web Developer', 'DSA Learner', 'Future Software Engineer'],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+</script>
+
+</body>
 </html>
